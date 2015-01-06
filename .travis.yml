@@ -14,9 +14,9 @@ branches:
 
 # PREPARE SYSTEM to install prerequisites or dependencies.
 before_install:
-  - sudo apt-get -qq update
-  - sudo apt-get -y -qq upgrade
-#   - sudo apt-get -y -qq install [packages]
+  - travis_wait sudo apt-get -qq update
+  - travis_wait sudo apt-get -y -qq upgrade
+  # - sudo apt-get -y -qq install [packages]
 
 # INSTALL prerequisites or dependencies necessary to run your build.
 # install:
