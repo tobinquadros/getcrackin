@@ -4,8 +4,8 @@
 
 language: python
 python:
-  - 3.4
   - 2.7
+  - 3.4
 
 # Which branch commits to build and test on.
 branches:
@@ -19,18 +19,20 @@ before_install:
   # - sudo apt-get -y -qq install [packages]
 
 # INSTALL prerequisites or dependencies necessary to run your build.
-# install:
+install:
   # - pip install -r requirements.txt
-  # - pip install coveralls
+  - pip install coveralls
 
 # PREPARE BUILD for testing, e.g. database config, env_vars
 # before_script:
 
-# RUN tests, e.g. python setup.py test.
+# RUN tests, and get coverage stats.
 script:
-  - python setup.py test
-  # - coverage run --source getcrackin setup.py test
+  # - python setup.py test
+  - coverage run --source=getcrackin setup.py test
 
-# Result exported to TRAVIS_TEST_RESULT, you can use in after_script commands.
-# after_script:
+# Results exported to TRAVIS_TEST_RESULT, use in after_script commands.
+# Send off coverage info to coveralls.io.
+after_script:
+  - coveralls
 
