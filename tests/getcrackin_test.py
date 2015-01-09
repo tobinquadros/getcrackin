@@ -6,8 +6,8 @@ import unittest
 
 def shell_out(cmdline):
     proc = subprocess.Popen(cmdline, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-    output = proc.communicate()[0].rstrip()
-    print "actual is {}".format(output)
+    output = proc.communicate()[0].rstrip().decode()
+    print("actual is {}".format(output))
     return output
 
 class ParserTestCase(unittest.TestCase):

@@ -34,6 +34,7 @@ setup(
     packages = find_packages(exclude = ["tests"]),
     test_suite = "tests",
     url = "http://pypi.python.org/pypi/getcrackin",
+    use_2to3 = True,
     version = "0.0.1"
 )
 

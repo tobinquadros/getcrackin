@@ -20,7 +20,8 @@ before_install:
 
 # INSTALL prerequisites or dependencies necessary to run your build.
 # install:
-#   - pip install -r requirements.txt
+  # - pip install -r requirements.txt
+  # - pip install coveralls
 
 # PREPARE BUILD for testing, e.g. database config, env_vars
 # before_script:
@@ -28,6 +29,7 @@ before_install:
 # RUN tests, e.g. python setup.py test.
 script:
   - python setup.py test
+  # - coverage run --source getcrackin setup.py test
 
 # Result exported to TRAVIS_TEST_RESULT, you can use in after_script commands.
 # after_script:
