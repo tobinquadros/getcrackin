@@ -21,7 +21,7 @@ setup(
         "Programming Language :: Python :: 3.4",
         "Topic :: Utilities",
     ],
-    description = ("CLI app that helps figure out what to get crackin' on next."),
+    description = ("A template Python CLI app."),
     download_url = "http://github.com/tobinquadros/getcrackin",
     entry_points = {
         "console_scripts": ["getcrackin = getcrackin.getcrackin:main"],
