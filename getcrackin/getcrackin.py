@@ -11,7 +11,7 @@ def parse_cmdline():
 
     # Create parser object
     parser = argparse.ArgumentParser(
-            description="CLI app that helps figure out what to get crackin' on next.")
+            description="A CLI app template to get started from, with zero dependencies.")
 
     # Create mutually exclusive option group for verbosity
     verbose_group = parser.add_mutually_exclusive_group()
